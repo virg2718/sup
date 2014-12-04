@@ -7,8 +7,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<header class = "navbar navbar-fixed-top navbar-inverse">
+		<div class = "container custnav">
+			'SUP
+			<nav>
+				<ul class = "nav navbar-nav pull-right">
+					<li><%= link_to "Home", '#' %></li>
+					<li><%= link_to "My Profile", '#' %></li>
+					<li><%= link_to "Sign Out", '#' %></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class = "containter">
+		<%= yield %>
+	</div>
+	<div id = "footer">
+		<div class = "container">
+			<p class = "muted credit"> Terms and Conditions </p>
+		</div>
+	</div>
 </body>
 </html>
