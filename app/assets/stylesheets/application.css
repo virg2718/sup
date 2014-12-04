@@ -18,6 +18,7 @@
 
 html {
 	overflow-y: scroll;
+
 }
 
 #logo {
@@ -30,6 +31,7 @@ html {
 	padding-top: 10px;
 	font-weight: bold;
 	font-style: italic;
+	font-family: Baskerville, “Baskerville Old Face”, “Hoefler Text”, Garamond, “Times New Roman”, serif;
 }
 #logo:hover {
 	text-decoration: underline;
@@ -39,7 +41,8 @@ html {
 }
 
 #content {
-	font_family: ;
+	font-family: Gill Sans MT, sans-serif;
+	background-color: #BDBDBD;
 }
 #footer {
 
