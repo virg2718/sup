@@ -9,7 +9,7 @@
 <body>
 	<header class = "navbar navbar-fixed-top navbar-inverse">
 		<div class = "container custnav">
-			'SUP
+			<%= link_to "'SUP", '#', id: 'logo' %> 
 			<nav>
 				<ul class = "nav navbar-nav pull-right">
 					<li><%= link_to "Home", '#' %></li>
@@ -19,7 +19,7 @@
 			</nav>
 		</div>
 	</header>
-	<div class = "containter">
+	<div id = "content" class = "containter">
 		<%= yield %>
 	</div>
 	<div id = "footer">
