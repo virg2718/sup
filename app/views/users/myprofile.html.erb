@@ -1,0 +1,57 @@
+<html>
+	<div>
+		<!-- Code below adapted from railstutorial.org.-->
+		<span>
+			<!-- This div displays the photo if present -->
+			<div id = "pic">
+			<%= user.content %>
+			<%= image_tag user.picture.url if user.picture? %>
+			</div>
+			<!-- This div is the form for uploading a photo, the JavaScript at the end is a client-side check on the size of the photo -->
+			<div>
+			<%= form_for(@user, html: { multipart: true }) do |f| %>
+				<div class="picture">
+		    		<%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png'%>
+		  		</div>
+		  	<%end%>
+		  	<script type="text/javascript">
+			  $('#user_picture').bind('change', function() {
+			    size_in_megabytes = this.files[0].size/1024/1024;
+			    if (size_in_megabytes > 5) {
+			      alert('Maximum file size is 5MB. Please choose a smaller file.');
+			    }
+			  });
+			</script>
+			</div>
+		</span>
+		<!-- Displays user's name-->
+		<span id = "name">
+			<%=@user.name%>
+		</span>
+	</div>
+	<!-- List User's group memberships -->
+	<div>
+		<div id = "head">
+			Groups:
+		</div>
+		<div id = "glist">
+			<ul>
+				<% @memberships.each do|membership| %>
+					<li><%=membership%><li>
+				<% end %>
+			<ul>
+		</div>
+		<div>
+			<h2>Add Group:</h2>
+			<% form_for (@nm do |f| %>
+				<div class = "field">
+					<%= f.label :groups 
+					<%= f.collection_select(:group_id, @newgroups, :group_id, :moniker, :include_blank => "Pick A Group") %>
+				</div>
+				<div class = "action">
+				 	<%= f.submit "Add Group" %> <% end %>
+				 </div>
+			<% end %>
+		</div>
+	</div>
+</html>
