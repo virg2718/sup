@@ -36,10 +36,22 @@
 		</div>
 		<div id = "glist">
 			<ul>
-				<% @users.each do|user| %>
-					<li><%=@groups.moniker%><li>
+				<% @memberships.each do|membership| %>
+					<li><%=membership%><li>
 				<% end %>
 			<ul>
+		</div>
+		<div>
+			<h2>Add Group:</h2>
+			<% form_for (@nm do |f| %>
+				<div class = "field">
+					<%= f.label :groups 
+					<%= f.collection_select(:group_id, @newgroups, :group_id, :moniker, :include_blank => "Pick A Group") %>
+				</div>
+				<div class = "action">
+				 	<%= f.submit "Add Group" %> <% end %>
+				 </div>
+			<% end %>
 		</div>
 	</div>
 </html>
