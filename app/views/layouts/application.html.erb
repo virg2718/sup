@@ -1,3 +1,6 @@
+<!-- General application layout for all pages except login/register. Declares a navigation bar and a footer -->
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,13 +13,17 @@
 	<header class = "navbar navbar-fixed-top navbar-inverse">
 		<div class = "container custnav">
 			<%= link_to "'SUP", '#', id: 'logo' %> 
-			<nav>
-				<ul class = "nav navbar-nav pull-right">
-					<li><%= link_to "Home", '#' %></li>
-					<li><%= link_to "My Profile", '#' %></li>
-					<li><%= link_to "Sign Out", '#' %></li>
-				</ul>
-			</nav>
+			<% if logged_in? %>
+				<nav>
+					<ul class = "nav navbar-nav pull-right">
+						<li><%= link_to "Home", home_path %></li>
+						<li><%= link_to "My Profile", myprofile_path %></li>
+						<li><%= link_to "Sign Out", logout_path %></li>
+					</ul>
+				</nav>
+			<% else %>
+          		<li><%= link_to "Log in", login_path %></li>
+        	<% end %>
 		</div>
 	</header>
 	<div id = "content" class = "containter">

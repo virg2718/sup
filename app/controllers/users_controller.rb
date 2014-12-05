@@ -1,11 +1,13 @@
 class UsersController < ApplicationController
-	def myprof
+	def show
 		render action: 'myprofile'
 		@user = User.find_by_id(params[:id])
-		@groups = Group.find_by_id(params[:id]).order(:moniker)
+		@memberships = @user.memberships.order('name')
 		def micropost_params
       		params.require(:micropost).permit(:content, :picture)
     	end
+    	@groups = Group.select(:moniker).order('name')
+    	@newgroups = @allgroups - @memberships
 	end
 	def show
 		render action: 'home'

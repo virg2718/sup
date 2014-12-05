@@ -1,27 +1,35 @@
 <html>
 	<div>
-		<!-- Code below adapted from railstutorial.org-->
-		<span class = picture>
+		<!-- Code below adapted from railstutorial.org.-->
+		<span>
+			<!-- This div displays the photo if present -->
+			<div id = "pic">
 			<%= user.content %>
 			<%= image_tag user.picture.url if user.picture? %>
+			</div>
+			<!-- This div is the form for uploading a photo, the JavaScript at the end is a client-side check on the size of the photo -->
+			<div>
+			<%= form_for(@user, html: { multipart: true }) do |f| %>
+				<div class="picture">
+		    		<%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png'%>
+		  		</div>
+		  	<%end%>
+		  	<script type="text/javascript">
+			  $('#user_picture').bind('change', function() {
+			    size_in_megabytes = this.files[0].size/1024/1024;
+			    if (size_in_megabytes > 5) {
+			      alert('Maximum file size is 5MB. Please choose a smaller file.');
+			    }
+			  });
+			</script>
+			</div>
 		</span>
-		<%= form_for(@user, html: { multipart: true }) do |f| %>
-			<span class="picture">
-	    		<%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png'%>
-	  		</span>
-	  	<%end%>
-	  	<script type="text/javascript">
-		  $('#micropost_picture').bind('change', function() {
-		    size_in_megabytes = this.files[0].size/1024/1024;
-		    if (size_in_megabytes > 5) {
-		      alert('Maximum file size is 5MB. Please choose a smaller file.');
-		    }
-		  });
-		</script>
+		<!-- Displays user's name-->
 		<span id = "name">
 			<%=@user.name%>
 		</span>
 	</div>
+	<!-- List User's group memberships -->
 	<div>
 		<div id = "head">
 			Groups:

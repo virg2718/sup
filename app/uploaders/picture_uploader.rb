@@ -1,10 +1,9 @@
 # The below is adapted from railstutorial.org
 
 class PictureUploader < CarrierWave::Uploader::Base
+  #resize:
   include CarrierWave::MiniMagick
-  process resize_to_limit: [400, 400]
-  # Include RMagick or MiniMagick support:
-  # include CarrierWave::RMagick
+  process resize_to_limit: [150, 150]
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -30,5 +29,5 @@ class PictureUploader < CarrierWave::Uploader::Base
     %w(jpg jpeg gif png)
    end
 
-  mount_uploader :picture, PictureUploader
+
 end

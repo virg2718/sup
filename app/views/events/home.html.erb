@@ -1,6 +1,6 @@
 <span>
 	<table data-toggle="table" data-url="data1.json" data-cache="false" data-height="299">
-        <tr>
+        <tr id = "tabletop">
             <th data-field="title">Event</th>
             <th data-field="description">Description</th>
             <th data-field="date">Date</th>
@@ -8,7 +8,7 @@
         </tr>
         <!-- Iterates through the list of events, printing out each item, ordered by date -->
        	<% @events.each do|event| %>
-       		<tr> 
+       		<tr id = "tablebody"> 
        			<td><%=event.title%><td>
        			<td><%=event.description%><td>
        			<td><%=event.date%><td>
@@ -17,7 +17,6 @@
         <%end%>
 	</table>
 </span>
-
 <span>
 	<ul class="list-group" id="groups">
 		<% @groups.each do|group| %>
