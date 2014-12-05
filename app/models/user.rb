@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 	has_many :memberships
 	has_many :groups, :through => :memberships
+<<<<<<< HEAD
 	def events
 		@events = []
 		user.groups.each do |group|
@@ -17,4 +18,6 @@ class User < ActiveRecord::Base
         errors.add(:picture, "should be less than 5MB")
       end
     end
+=======
+>>>>>>> session
 end

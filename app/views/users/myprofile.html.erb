@@ -1,3 +1,4 @@
+<% provide(:title, "My Profile") %>
 <html>
 	<div>
 		<!-- Code below adapted from railstutorial.org.-->
@@ -45,12 +46,12 @@
 			<h2>Add Group:</h2>
 			<% form_for (@nm do |f| %>
 				<div class = "field">
-					<%= f.label :groups 
+					<%= f.label :groups %>
 					<%= f.collection_select(:group_id, @newgroups, :group_id, :moniker, :include_blank => "Pick A Group") %>
 				</div>
 				<div class = "action">
 				 	<%= f.submit "Add Group" %> <% end %>
-				 </div>
+				</div>
 			<% end %>
 		</div>
 	</div>
