@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<!-- General application layout for all pages except login/register. Declares a navigation bar and a footer -->
+
+
+=======
+>>>>>>> session
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +13,37 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<<<<<<< HEAD
+	<header class = "navbar navbar-fixed-top navbar-inverse">
+		<div class = "container custnav">
+			<%= link_to "'SUP", '#', id: 'logo' %> 
+			<% if logged_in? %>
+				<nav>
+					<ul class = "nav navbar-nav pull-right">
+						<li><%= link_to "Home", home_path %></li>
+						<li><%= link_to "My Profile", myprofile_path %></li>
+						<li><%= link_to "Sign Out", logout_path %></li>
+					</ul>
+				</nav>
+			<% else %>
+          		<li><%= link_to "Log in", login_path %></li>
+        	<% end %>
+		</div>
+	</header>
+	<div id = "content" class = "containter">
+		<%= yield %>
+	</div>
+	<div id = "footer">
+		<div class = "container">
+			<p>
+				<small class = "muted credit"> Terms and Conditions </small>
+			</p>
+		</div>
+	</div>
+=======
 
 <%= yield %>
 
+>>>>>>> session
 </body>
 </html>

@@ -1,0 +1,28 @@
+ <% provide(:title, "Home") %>
+ <div> 
+  <span>
+  	<table data-toggle="table" data-url="data1.json" data-cache="false" data-height="299">
+          <tr id = "tabletop">
+              <th data-field="title">Event</th>
+              <th data-field="description">Description</th>
+              <th data-field="date">Date</th>
+              <th data-field="starttime">Time/th>
+          </tr>
+          <!-- Iterates through the list of events, printing out each item, ordered by date -->
+         	<% @events.each do|event| %>
+         		<tr id = "tablebody"> 
+         			<td><%=event.title%><td>
+         			<td><%=event.description%><td>
+         			<td><%=event.date%><td>
+         			<td><%=event.starttime%><td>
+          	</tr>
+          <%end%>
+  	</table>
+  </span>
+  <span>
+  	<ul class="list-group" id="groups">
+  		<% @groups.each do|group| %>
+  			<li class="list-group-item"><%=group.moniker%><li>
+  		<%end%>
+  </span>
+</div>

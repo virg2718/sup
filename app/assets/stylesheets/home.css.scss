@@ -1,0 +1,26 @@
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+#groups {
+	border: solid;
+	border-color: black;
+	border-collapse: collapse;
+	li { 
+		background: #F6CED8; 
+	}
+	li:nth-child(odd) { 
+		background: white; 
+	}
+}
+#tabletop {
+	background-color: black;
+	color: white;
+	width: 70%;
+}
+
+#tablebody {
+	border-collapse: collapse;
+	border: 1px solid black;
+	width: 70%;
+}
+
