@@ -1,4 +1,4 @@
-<% provide (:title, "Log in") %>
+<% provide(:title, "Log in") %>
 
 <div id = "landing">
 	<div class = "top">	
@@ -10,11 +10,11 @@
 	
 	<div id = "sign-in">
 		<h2> Need to know 'sup? Sign in </h2>
-		<% form_for(:login, url: login_path) do |f| %>
+		<% form_for(:show, url: login_path) do |f| %>
 			<%= f.label :email %>
 			<%= f.text_field :email, class: 'form-control' %>
 			<%= f.label :password %>
-			<%= f.password_field :password, class : 'form-control' %>
+			<%= f.password_field :password, class: 'form-control' %>
 			<%= f.submit "Log In", class: "btn btn-primary" %>
 		<% end %>
 	</div>
