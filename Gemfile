@@ -37,7 +37,7 @@ gem 'fog',                     '1.23.0'
 
 # gem 'twitter_bootstrap_form_for' 
 
-
+gem 'bootstrap_form'
 gem 'actionpack', '~> 4.1.6'
 
 
@@ -53,3 +53,4 @@ gem 'actionpack', '~> 4.1.6'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'twitter-bootstrap-rails'

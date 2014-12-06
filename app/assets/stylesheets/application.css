@@ -12,31 +12,23 @@
  *
  *= require_tree .
  *= require_self
+ *= require rails_bootstrap_forms
  */
-<<<<<<< Updated upstream
-<<<<<<< HEAD
+ */
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 html {
 	overflow-y: scroll;
-
-=======
-@import "bootstrap-sprockets";
-@import "bootstrap";
-
-* {
-	overflow-y: scroll;
->>>>>>> Stashed changes
 }
 
 #logo {
 	float: left;
-	margin-right: 8px;
-	font-size: 2.3em;
+	margin-right: 2px;
+	font-size: 3.3em;
 	color: white;
 	text-transform: uppercase;
-	letter-spacing: -1.1px;
+	letter-spacing: 1px;
 	padding-top: 10px;
 	font-weight: bold;
 	font-style: italic;
@@ -47,11 +39,18 @@ html {
 }
 .custnav {
 	background: linear-gradient(black, gray);
+	background-size: 
+}
+#newpage {
+	width: 75%;
+	font-size: large;
 }
 
 #content {
+	padding: 75px;
 	font-family: Gill Sans MT, sans-serif;
 	background-color: #BDBDBD;
+	background-size: cover;
 }
 #footer {
 
@@ -65,10 +64,5 @@ html {
 	bottom: 0;
 	height: 60px;
 	width: 100%;
-<<<<<<< Updated upstream
 }
-=======
->>>>>>> session
-=======
-}
->>>>>>> Stashed changes
+

@@ -7,19 +7,18 @@
 			A simple way to stay in the loop and never miss out on being where you want to.  
 		</p>
 	</div>
-	
-	<div id = "sign-in">
+	<span class = "row form.horizontal" id = "sign-in">
 		<h2> Need to know 'sup? Sign in </h2>
-		<% form_for(:session, url: login_path) do |f| %>
+		<% bootstrap_form_for(@session, url: login_path) do |f| %>
 			<%= f.label :email %>
 			<%= f.text_field :email, class: 'form-control' %>
 			<%= f.label :password %>
 			<%= f.password_field :password, class: 'form-control' %>
 			<%= f.submit "Log In", class: "btn btn-primary" %>
 		<% end %>
-	</div>
+	</span>
 	
-	<div id = "sign-up">
+	<span class = "row form.horizontal" id = "sign-up">
 		<h2> Don't have an account? Sign up </h2>
 		<% form_for(:user, url: new_user_path) do |f| %>
 			<% f.label :name, "Username" %>
@@ -34,5 +33,5 @@
 			<% f.text_field :lastName %>
 			<% f.submit "Sign Up", class: "btn btn-primary" %>			
 		<% end %>
-	</div>
+	</span>
 </div>
