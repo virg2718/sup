@@ -151,7 +151,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  actionpack (~> 4.1.6)
   bootstrap-sass (= 3.2.0.0)
   carrierwave (= 0.10.0)
   coffee-rails (~> 4.0.0)

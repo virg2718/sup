@@ -1,13 +1,5 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  resources :user_tests
-=======
->>>>>>> 10a9dcdd80aaa13f058739e8e73aef77ff5d01bb
->>>>>>> FETCH_HEAD
+  resources :user
   
   root 'sessions#new'
   post 'login' => 'session#create'
@@ -15,30 +7,14 @@ Rails.application.routes.draw do
   
   # get 'myprofile' => 'users#show'
   resources :users
-<<<<<<< HEAD
   resources :events
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> session
->>>>>>> 10a9dcdd80aaa13f058739e8e73aef77ff5d01bb
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  # You can have the root of your site routed with "root"
-  root 'user_tests#new'
-
-=======
->>>>>>> session
->>>>>>> 10a9dcdd80aaa13f058739e8e73aef77ff5d01bb
->>>>>>> FETCH_HEAD
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
