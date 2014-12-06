@@ -34,7 +34,12 @@ gem 'carrierwave',             '0.10.0'
 gem 'mini_magick',             '3.8.0'
 gem 'fog',                     '1.23.0'
 
+
 # gem 'twitter_bootstrap_form_for' 
+
+
+gem 'actionpack', '~> 4.1.6'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

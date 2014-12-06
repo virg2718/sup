@@ -1,16 +1,20 @@
 Rails.application.routes.draw do
 
-  
-
-  
   root 'sessions#new'
   post 'login' => 'session#create'
   delete 'logout' => 'session#destroy'
   
   # get 'myprofile' => 'users#show'
   resources :users
-  resources :user_tests
+
+
  
+
+  resources :events
+  # The priority is based upon order of creation: first created -> highest priority.
+  # See how all your routes lay out with "rake routes".
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -18,6 +22,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
  
+
 
 
   # Example of regular route:
@@ -28,9 +33,15 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
 
+
   resources :users
   resources :events
 
+  #   resources :products
+
+
+  resources :users
+  resources :events
   #   resources :products
 
 

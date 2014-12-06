@@ -1,9 +1,11 @@
 <<<<<<< HEAD
+
+<!-- General application layout for all pages except login/register. Declares a navigation bar and a footer -->
+=======
+>>>>>>> 95c9cdd80ad2e2bbb7134794294897bd5c07ccac
+
 <!-- General application layout for all pages except login/register. Declares a navigation bar and a footer -->
 
-
-=======
->>>>>>> session
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +16,9 @@
 </head>
 <body>
 <<<<<<< HEAD
+
+=======
+>>>>>>> 95c9cdd80ad2e2bbb7134794294897bd5c07ccac
 	<header class = "navbar navbar-fixed-top navbar-inverse">
 		<div class = "container custnav">
 			<%= link_to "'SUP", '#', id: 'logo' %> 
@@ -40,10 +45,14 @@
 			</p>
 		</div>
 	</div>
-=======
+<<<<<<< HEAD
+
 
 <%= yield %>
 
->>>>>>> session
+
+=======
+<%= yield %>
+>>>>>>> 95c9cdd80ad2e2bbb7134794294897bd5c07ccac
 </body>
 </html>

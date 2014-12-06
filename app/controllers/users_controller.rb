@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-<<<<<<< HEAD
 	def show
 		render action: 'myprofile'
 		@user = User.find_by_id(params[:id]).order('name')
@@ -18,9 +17,4 @@ class UsersController < ApplicationController
 		params[:nm][group_id]
 	end
 
-=======
-	
-	
-	
->>>>>>> session
 end
