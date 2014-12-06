@@ -1,3 +1,19 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.top {
+	font: oblique, bold;
+}
+.custform {
+	background-color: black;
+	padding: 0px;
+}
+#sign-up {
+	position: left;
+	margin-right: -40px;
+}
+#sign-in {
+	position: right;
+	margin-right: 500px;
+}
