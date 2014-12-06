@@ -13,21 +13,17 @@
  *= require_tree .
  *= require_self
  */
-<<<<<<< Updated upstream
-<<<<<<< HEAD
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 html {
 	overflow-y: scroll;
-
-=======
+}
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 * {
 	overflow-y: scroll;
->>>>>>> Stashed changes
 }
 
 #logo {
@@ -65,10 +61,6 @@ html {
 	bottom: 0;
 	height: 60px;
 	width: 100%;
-<<<<<<< Updated upstream
 }
-=======
->>>>>>> session
-=======
-}
->>>>>>> Stashed changes
+
+
