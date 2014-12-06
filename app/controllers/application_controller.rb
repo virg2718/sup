@@ -10,5 +10,8 @@ class ApplicationController < ActionController::Base
 =======
   protect_from_forgery with: :exception
   include SessionsHelper
+<<<<<<< HEAD
+=======
 >>>>>>> session
+>>>>>>> 10a9dcdd80aaa13f058739e8e73aef77ff5d01bb
 end
