@@ -8,35 +8,27 @@
 		</p>
 	</div>
 	<form class = "form-vertical" role="form">
-	<span id = "sing-in">
-		<h2> Need to know 'sup? Sign in </h2>
-			<%= form_tag(url: new_user_path, class: "form-group form") do%>
-				<div>
-				<%= label_tag("Email") %>
-				<%= email_field_tag(:email, "myemail@email.com")%>
-				</div>
-				<%=	label_tag("Password")%>
-				<%= password_field_tag(:password, :placeholder => "Password")%>
-				<div>
-				<%= submit_tag("Log In", class: "btn btn-primary") %>
-				</div>
-			<% end %>
-	</span>
-	<span id = "sign-up">
-		<h2> Don't have an account? Sign up </h2>
-			<%= form_for(@user, url: new_user_path, class: "form-control") do |f| %>
-				<% f.label :name, "Username" %>
-				<% f.text_field :name %>
-				<% f.label :email  %>
-					<% f.text_field :email %>
-					<% f.label :password  %>
-					<% f.password_field :password %>
-					<% f.label :firstName, "First Name" %>
-					<% f.text_field :firstName %>
-					<% f.label :lastName, "Last Name" %>
-					<% f.text_field :lastName %>
+		<div id = "sign-in">
+			<h2> Need to know 'sup? Sign in </h2>
+				<%= bootstrap_form_for(@user, label_col: "col-sm-2", control_col: "col-sm-6") do |f| %>
+				  <%= f.email_field :email, label: "Email", placeholder: "David@CS50.com" %>
+				  <%= f.password_field :password, label: "Password", placeholder: "Password" %>
+				  <!--%= f.check_box :user_id %-->
+				  <%= f.submit "Log In" %>
+				<% end %>
+		</div>
+		<div id = "sign-up">
+			<h2> Don't have an account? Sign up </h2>
+				<%= bootstrap_form_for(@user, url: new_user_path, class: "form-control") do |f| %>
+					<% f.text_field :name, label: "Username", placeholder: "Cool Username" %>
+					<% f.text_field :email, label: "Email", placeholder: "Malan@CS50.com" %>
+					<% f.password_field :password, label: "Password"%>
+					<%= f.password_field :password_confirmation, label: "Confirm Password", placeholder: "Confirm" %>
+					<% f.text_field :firstName, "First Name" %>
+					<% f.text_field :lastName, "Last Name" %>
 					<% f.submit "Sign Up", class: "btn btn-primary" %>	
 				<% end %>
-	</span>
-</form>
+		</div>
+	</form>
 </div>
+			  
