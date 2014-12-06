@@ -1,25 +1,15 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-  resources :user_tests
-=======
   
-  root 'login' => 'sessions#new'
+  root 'sessions#new'
   post 'login' => 'session#create'
   delete 'logout' => 'session#destroy'
   
   # get 'myprofile' => 'users#show'
   resources :users
->>>>>>> session
-
+  resources :events
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-<<<<<<< HEAD
-  # You can have the root of your site routed with "root"
-  root 'user_tests#new'
-
-=======
->>>>>>> session
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -27,12 +17,9 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-<<<<<<< HEAD
   resources :users
   resources :events
-=======
   #   resources :products
->>>>>>> session
 
   # Example resource route with options:
   #   resources :products do
