@@ -22,6 +22,7 @@
           			<span class="icon-bar"></span>
           			<span class="icon-bar"></span>
         		</a>
+        		
 				<%= link_to "'SUP", '#', id: 'logo' %> 
 					<nav>
 						<% if logged_in? %>
@@ -34,7 +35,7 @@
 					</nav>
 		</div>
 	</header>
-	<div id = "content" class = "containter">
+	<div id = "content" class = "container-fluid">
 		<%= yield %>
 	</div>
 	<div id = "footer">

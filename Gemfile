@@ -35,9 +35,7 @@ gem 'mini_magick',             '3.8.0'
 gem 'fog',                     '1.23.0'
 
 
-# gem 'twitter_bootstrap_form_for' 
-
-gem 'bootstrap_form'
+gem 'bootstrap_form', '~> 2.2.0'
 gem 'actionpack', '~> 4.1.6'
 
 
