@@ -151,10 +151,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-<<<<<<< HEAD
-=======
+
   actionpack (~> 4.1.6)
->>>>>>> 95c9cdd80ad2e2bbb7134794294897bd5c07ccac
+  95c9cdd80ad2e2bbb7134794294897bd5c07ccac
   bootstrap-sass (= 3.2.0.0)
   carrierwave (= 0.10.0)
   coffee-rails (~> 4.0.0)

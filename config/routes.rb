@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
   root 'sessions#new'
-  post 'login' => 'sessions#create'
-  delete 'logout' => 'sessions#destroy'
-  post 'new_user' => 'users#show'
+  post 'login' => 'session#create'
+  delete 'logout' => 'session#destroy'
+  post 'new_user' => 'user#show'
   
   # get 'myprofile' => 'users#show'
   resources :users
