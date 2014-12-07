@@ -1,18 +1,29 @@
 <% provide(:title, "Sign Up") %>
 
-<div class = "main-content">
-	<h2> Sign Up </h2>
-	<%= form_tag(@user) do %>
-		<div><%= label_tag("Username") %></div>			
-		<div><%= text_field_tag(:name) %></div>
-		<div><%= label_tag("Email") %></div>
-		<div><%= email_field_tag(:email, "myemail@email.com") %></div>
-		<div><%= label_tag("Password") %></div>
-		<div><%= password_field_tag(:password, :placeholder => "Password") %></div>
-		<div><%= label_tag("First Name") %></div>
-		<div><%= text_field_tag(:firstName) %></div>
-		<div><%= label_tag("Lat Name") %></div>
-		<div><%= text_field_tag(:lastName) %></div>
-		<div><%= submit_tag("Submit", class: "btn btn-primary") %></div>	
-	<% end %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email, class: 'form-control' %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.label :firstName, "First Name" %>
+      <%= f.text_field :firstName, class: 'form-control' %>
+	
+      <%= f.label :lastName, "Last Name" %>
+      <%= f.text_field :lastName, class: 'form-control' %>
+
+      <%= f.submit "Create account", class: "btn btn-primary" %>
+    <% end %>
+  </div>
 </div>

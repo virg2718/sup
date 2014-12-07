@@ -1,22 +1,25 @@
 class UsersController < ApplicationController
+	
 	def show
-#		@user = User.find_by_id(params[:id]).order('name')
-#		def user_params
-#      		params.require(:user).permit(:content, :picture)
+		
     	end
-		render action: 'myprofile'
-
-#	def show
-#		render action: 'home'
-#		@events = events
-#	end
-#	def newmem
-#		nm = memberships.new(user_id: params[:user_id])
-#		params[:nm][group_id]
-#	end
+	
 
 	def new
 		@user = User.new
+	end
+
+	def user_params
+	      params.require(:user).permit(:name, :email, :password, :firstName, :lastName)
+        end
+
+	def create
+		@user = User.new(user_params)
+    		if @user.save
+      			redirect_to @user
+    		else
+      			render 'new'
+    		end
 	end
 
 end
