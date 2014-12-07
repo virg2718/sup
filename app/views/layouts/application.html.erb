@@ -14,24 +14,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-	<header class = "navbar navbar-fixed-top navbar-inverse">
-		<div class = "container custnav">
-			<%= link_to "'SUP", '#', id: 'logo' %> 
-			<% if logged_in? %>
-				<nav>
-					<ul class = "nav navbar-nav pull-right">
-						<li><%= link_to "Home", home_path %></li>
-						<li><%= link_to "My Profile", myprofile_path %></li>
-						<li><%= link_to "Sign Out", logout_path %></li>
-					</ul>
-				</nav>
-			<% else %>
-          		<li><%= link_to "Log in", login_path %></li>
-        	<% end %>
+	<header class = "navbar navbar-fixed-top navbar-inverse custnav">
+		<div class = "navbar-inner">
+			<div class = "container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          			<span class="icon-bar"></span>
+          			<span class="icon-bar"></span>
+          			<span class="icon-bar"></span>
+        		</a>
+        		
+				<%= link_to "'SUP", '#', id: 'logo' %> 
+					<nav>
+						<% if logged_in? %>
+							<ul class = "nav navbar-nav pull-right">
+								<li><%= link_to "Home", home_path %></li>
+								<li><%= link_to "My Profile", myprofile_path %></li>
+								<li><%= link_to "Sign Out", logout_path %></li>
+							</ul>
+	        			<% end %>
+					</nav>
 		</div>
 	</header>
-	<div id = "content" class = "containter">
+	<div id = "content" class = "container-fluid">
 		<%= yield %>
 	</div>
 	<div id = "footer">
@@ -41,13 +45,5 @@
 			</p>
 		</div>
 	</div>
-
-
-
-<%= yield %>
-
-
-
-
 </body>
 </html>
