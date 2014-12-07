@@ -1,6 +1,6 @@
 <% provide(:title, "Log in") %>
 
-<div id = "landing">
+<div class = "main-content">
 	<div class = "top">	
 		<h1> Welcome to 'Sup </h1>
 		<p> 
@@ -8,31 +8,19 @@
 		</p>
 	</div>
 	
-	<div id = "sign-in">
+	<div id = "sing-in">
 		<h2> Need to know 'sup? Sign in </h2>
-		<% form_for(:session, url: login_path) do |f| %>
-			<%= f.label :email %>
-			<%= f.text_field :email, class: 'form-control' %>
-			<%= f.label :password %>
-			<%= f.password_field :password, class: 'form-control' %>
-			<%= f.submit "Log In", class: "btn btn-primary" %>
-		<% end %>
+			<%= form_tag({controller: "sessions", action: "create"}, {method: "post", class: 				"form-vertical"}) do%>
+				<div><%= label_tag("Email") %></div>
+				<div><%= email_field_tag(:email, "myemail@email.com")%></div>
+				<div><%= label_tag("Password")%></div>
+				<div><%= password_field_tag(:password, :placeholder => "Password")%></div>
+				<div><%= submit_tag("Log In", class: "btn btn-primary") %></div>
+			<% end %>
 	</div>
-	
+
 	<div id = "sign-up">
-		<h2> Don't have an account? Sign up </h2>
-		<% form_for(:user, url: new_user_path) do |f| %>
-			<% f.label :name, "Username" %>
-			<% f.text_field :name %>
-			<% f.label :email  %>
-			<% f.text_field :email %>
-			<% f.label :password  %>
-			<% f.password_field :password %>
-			<% f.label :firstName, "First Name" %>
-			<% f.text_field :firstName %>
-			<% f.label :lastName, "Last Name" %>
-			<% f.text_field :lastName %>
-			<% f.submit "Sign Up", class: "btn btn-primary" %>			
-		<% end %>
+		<h2> Don't have an account? <%=link_to 'Sign up', signup_path %></h2>
 	</div>
+
 </div>

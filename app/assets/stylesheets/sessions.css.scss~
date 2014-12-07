@@ -11,7 +11,6 @@
 	background: linear-gradient(black, gray);
 	padding: 0px;
 	width: 300px;
-	
 }
 
 .element{

@@ -1,9 +1,7 @@
 class SessionsController < ApplicationController
   
-#Consulted Stack Overflow: http://stackoverflow.com/questions/5174783/combined-sign-in-and-registration-page
+
   def new
-    @user = User.new
-    render action: 'new'
   end
 
   def create
