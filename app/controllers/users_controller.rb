@@ -17,9 +17,18 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
     		if @user.save
       			redirect_to @user
+      			render 'myprofile'
     		else
-      			render 'new'
+      			render 'myprofile'
     		end
-	end
+    end
+
+    def newmember
+    	@new_membership = Membership.new(:user_id = ":session")
+    end
+    def mem_params
+    	params.require(:membership).permit()
+
+
 
 end

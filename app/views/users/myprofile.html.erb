@@ -5,8 +5,7 @@
 		<span>
 			<!-- This div displays the photo if present -->
 			<div id = "pic">
-			<%= user.content %>
-			<%= image_tag user.picture.url if user.picture? %>
+			<%= image_tag @user.picture.url if @user.picture? %>
 			</div>
 			<!-- This div is the form for uploading a photo, the JavaScript at the end is a client-side check on the size of the photo -->
 			<div>
@@ -37,20 +36,21 @@
 		</div>
 		<div id = "glist">
 			<ul>
-				<% @memberships.each do|membership| %>
-					<li> <%= membership %> <li>
-				<% end %>
+				<%= unless @groups.nil? || @groups == 0 then 
+						@groups.moniker.each do|membership| %>
+							<li> <%= membership %> <li>
+						<% end %>
+				<% else %>
+						<li>You have no memberships<li>
+				<%end%>
 			<ul>
 		</div>
 		<div>
 			<h2>Add Group:</h2>
-			<% form_for @nm do |f| %>
+			<% bootstrap_form_for (@new_membership) do |f| %>
 				<div class = "field">
 					<%= f.label :groups %>
-					<%= f.collection_select(:group_id, @newgroups, :group_id, :moniker, :include_blank => "Pick A Group") %>
-				</div>
-				<div class = "action">
-				 	<%= f.submit "Add Group" %> <% end %>
+					<%= f.collection_select(:group_id, :group_id, @newgroups, :include_blank => "Pick A Group") %>
 				</div>
 			<% end %>
 		</div>

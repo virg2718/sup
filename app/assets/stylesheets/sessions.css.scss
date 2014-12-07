@@ -2,27 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.top{
+#landing {
+	overflow-y: scroll;
+	padding: 60px;
+}
+
+.top {
 	font: oblique, bold;
 }
-
-.input {
-	border: 2px;
-	background: linear-gradient(black, gray);
+.custform {
+	background-color: black;
 	padding: 0px;
-	width: 300px;
-	
 }
-
-.element{
-	margin-top: 3px;
-	margin-bottom: 3px;	
+#sign-up {
+	float: left;
+	margin-left: 50px;
 }
-
-#sign-in{
-	width: 300px;
-	margin-top: 20px;
-	backgound: white;	
-	position: right;
-	margin-right: 500px;
+#sign-in {
+	float: right;
+	margin-right: 50px;
 }

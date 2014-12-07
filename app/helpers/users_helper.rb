@@ -15,5 +15,4 @@ module UsersHelper
 		return @events
 	end
 
-
 end
