@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   get 'signup' => 'users#new'
   get 'myprofile' => 'users#show'
+  get 'home' => 'events#show'
   
   resources :users
   resources :events
