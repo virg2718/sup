@@ -50,7 +50,6 @@ html {
 
 body {
 	background: black; 
-	COLOR: white;
 	height: 100%;
 	width: 100%;
 }
