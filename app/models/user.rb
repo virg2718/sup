@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-	attr_accessor :remember_token
 	has_many :memberships
 	has_many :groups, :through => :memberships
 
@@ -19,9 +18,5 @@ class User < ActiveRecord::Base
         errors.add(:picture, "should be less than 5MB")
       end
     end
-    #As with the other code for cookies, this draws heavily on railstutorial.org
-    def remember
-	    self.remember_token = User.new_token
-	    update_attribute(:remember_digest, User.digest(remember_token))
-  	end
+
 end
