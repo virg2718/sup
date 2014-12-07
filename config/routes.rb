@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'sessions#new'
   post 'login' => 'session#create'
   delete 'logout' => 'session#destroy'
-  post 'new_user' => 'user#show'
+  post 'new_user' => 'users#show'
   
   # get 'myprofile' => 'users#show'
   resources :users

@@ -24,8 +24,8 @@
 					<%= f.text_field :email, label: "Email", placeholder: "Malan@CS50.com" %>
 					<%= f.password_field :password, label: "Password"%>
 					<%= f.password_field :password_confirmation, label: "Confirm Password", placeholder: "Confirm" %>
-					<%= f.text_field :firstName, "First Name" %>
-					<%= f.text_field :lastName, "Last Name" %>
+					<%= f.text_field :firstName, label: "First Name" %>
+					<%= f.text_field :lastName, label: "Last Name" %>
 					<%= f.submit "Sign Up", class: "btn btn-primary" %>	
 				<% end %>
 		</div>
