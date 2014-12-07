@@ -2,9 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.8'
-# RubyGems!!!
-gem 'rubygems-update', '~> 2.4.5'
+gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -38,9 +36,9 @@ gem 'fog',                     '1.23.0'
 
 
 gem 'bootstrap_form', '~> 2.2.0'
-gem 'actionpack', '~> 4.1.8'
+gem 'actionpack', '~> 4.1.6'
 
-gem 'devise', '~> 3.4.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

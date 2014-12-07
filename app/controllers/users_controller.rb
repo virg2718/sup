@@ -11,14 +11,10 @@ class UsersController < ApplicationController
 #	def show
 #		render action: 'home'
 #		@events = events
-#	end
+	end
 	def newmem
 		nm = memberships.new(user_id: params[:user_id])
 		params[:nm][group_id]
 	end
-	#code taken from railstutorial.org
-	def User.new_token
-    	SecureRandom.urlsafe_base64
-  	end
 
 end
