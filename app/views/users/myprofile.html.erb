@@ -44,13 +44,10 @@
 		</div>
 		<div>
 			<h2>Add Group:</h2>
-			<% form_for (@nm do |f| %>
+			<% form_for (@membership do |f| %>
 				<div class = "field">
 					<%= f.label :groups %>
-					<%= f.collection_select(:group_id, @newgroups, :group_id, :moniker, :include_blank => "Pick A Group") %>
-				</div>
-				<div class = "action">
-				 	<%= f.submit "Add Group" %> <% end %>
+					<%= f.collection_select(:group_id, :group_id, @newgroups, :include_blank => "Pick A Group") %>
 				</div>
 			<% end %>
 		</div>

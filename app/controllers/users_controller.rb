@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 	def show
-		@user = User.find_by_id(params[:id]).order('name')
+		@user = User.find_by_id(params[:id]).order(:name)
 #		def user_params
 #      		params.require(:user).permit(:content, :picture)
 #    	end

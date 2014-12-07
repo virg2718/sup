@@ -10,7 +10,7 @@
 	<form class = "form-vertical" role="form">
 		<div id = "sign-in">
 			<h2> Need to know 'sup? Sign in </h2>
-				<%= bootstrap_form_for(@user, label_col: "col-sm-2", control_col: "col-sm-6") do |f| %>
+				<%= bootstrap_form_for(@user, url: loign_path, label_col: "col-sm-2", control_col: "col-sm-6") do |f| %>
 				  <%= f.email_field :email, label: "Email", placeholder: "David@CS50.com" %>
 				  <%= f.password_field :password, label: "Password", placeholder: "Password" %>
 				  <!--%= f.check_box :user_id %-->
