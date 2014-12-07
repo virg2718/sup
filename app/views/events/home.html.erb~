@@ -19,7 +19,6 @@
           <%end%>
   	</table>
   </span>
-
   <span>
   	<ul class="list-group" id="groups">
   		<% @groups.each do|group| %>
