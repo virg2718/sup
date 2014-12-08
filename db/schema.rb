@@ -50,7 +50,5 @@ ActiveRecord::Schema.define(version: 20141207162429) do
     t.datetime "updated_at"
   end
 
-# Could not dump table "users" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
 
 end

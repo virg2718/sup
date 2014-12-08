@@ -36,23 +36,22 @@
 		</div>
 		<div id = "glist">
 			<ul>
-				<%= unless @groups.nil? || @groups == 0 then 
-						@groups.moniker.each do|membership| %>
+				<% if (@groups ) %>
+						<% @groups.moniker.each do|membership| %>
 							<li> <%= membership %> <li>
 						<% end %>
 				<% else %>
 						<li>You have no memberships<li>
-				<%end%>
+				<% end %>
 			<ul>
 		</div>
 		<div>
 			<h2>Add Group:</h2>
-			<% bootstrap_form_for (@new_membership) do |f| %>
-				<div class = "field">
-					<%= f.label :groups %>
-					<%= f.collection_select(:group_id, :group_id, @newgroups, :include_blank => "Pick A Group") %>
-				</div>
-			<% end %>
+				<%= bootstrap_form_for (@user, url: 'myprofile_path') do |f| %>
+					<div class = "field">
+						<%= f.collection_select(:group_id, :group_id, @newgroups, :include_blank => "Pick A Group") %>
+					</div>
+				<% end %>	
 		</div>
 	</div>
 

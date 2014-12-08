@@ -6,6 +6,8 @@ module UsersHelper
 		return @groups
 	end
 	
+	
+	
 	#gets all events for current user
 	def events
 		@events = []

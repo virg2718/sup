@@ -7,11 +7,16 @@ class UsersController < ApplicationController
 
 	def new
 		@user = User.new
+		@membership = Membership.new
 	end
 
 	def user_params
 	      params.require(:user).permit(:name, :email, :password, :firstName, :lastName)
         end
+
+    def newgroups
+    	@newgroups = Group.where.not(user: @current_user)
+    end
 
 	def create
 		@user = User.new(user_params)
@@ -23,12 +28,11 @@ class UsersController < ApplicationController
     		end
     end
 
-    def newmember
-    	@new_membership = Membership.new(:user_id = ":session")
-    end
-    def mem_params
-    	params.require(:membership).permit()
+    def add
+    	@group = Group.find(params[:group][:group_id])
+    	@group.users << @current_user
+    	@current_user.groups << @group
 
-
+    end	
 
 end
